@@ -20,29 +20,29 @@ input file. You will need to do something with this reference�
 
 2. Add a private function named "processFile". Call, aka execute this function from within your
 constructor. It returns nothing and accepts no arguments. This function will:
-   a. Open the input file.
-   b. Read the file's contents.
-   c. Close the file.
-   d. Convert the file contents into a String or Strings.
-   e. Tokenize the String contents.
+   a. Open the input file. +
+   b. Read the file's contents. +
+   c. Close the file. +
+   d. Convert the file contents into a String or Strings. +-
+   e. Tokenize the String contents. +
    f. Handle all exceptions within the body of the processFile function. That is, any user of
-      your code must be blissfully unaware of any need to handle exceptions.
+      your code must be blissfully unaware of any need to handle exceptions. -
    g. You may find that it is useful to place additional code in this function that will help you
       solve other requirements below. For example, you may choose to keep a running total
-      of the number of words you process here and save that total as a member variable.
+      of the number of words you process here and save that total as a member variable. +-
 
 3. Add a public "getter" for the word count, name it "getWordCount". Return the number of words
-   contained within the input file.
+   contained within the input file. +
 
 4. Add a public getter for the file length, name it getFileLength. Return the length of the file as
-   measured in bytes.
+   measured in bytes. -
 
 5. Add a public getter for the file name, name it getFileName. Return a reference to a String object
-   that contains the name of the input file.
+   that contains the name of the input file. +
 
 6. Add a public function named countThisWord. It accepts a reference to a String object, and you
    will find out how many times this specific String (or word or token) appears in the input file.
-   Return the count.
+   Return the count. +-
 
 7. Add a public function named getWordsHavingCount(), which accepts an int argument, the
    count. The return type is List<String>. Return all words that appear count times in the input file.
