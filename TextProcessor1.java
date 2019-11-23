@@ -6,7 +6,8 @@ public class TextProcessor1 {
 	private int lengthOfFile = 0;
 
 	public TextProcessor1(String fName) {
-		fileName = fName;
+		this.fileName = fName;
+		this.NodeOfWords = null;
 		processFile();
 	}
 
@@ -18,7 +19,7 @@ public class TextProcessor1 {
 			String line;
 			while ((line = reader.readLine()) != null)
 			{
-				lengthOfFile += line.length();
+				this.lengthOfFile += line.length();
 				StringTokenizer tmp = new StringTokenizer(line, " .?![]{}/\\\'\",-\n\t 1234567890", false);  //bro, read how the flag works
 				while((line = tmp.nextToken()) != null)
 					this.NodeOfWords.add(line);
