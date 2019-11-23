@@ -3,7 +3,6 @@ import java.util.*;
 public class TextProcessor1 {
 	private String fileName;
 	private List<StringTokenizer> NodeOfWords;
-	private List<String> records = new ArrayList<String>();
 	private int lengthOfFile = 0;
 
 	public TextProcessor1(String fName) {
@@ -20,7 +19,6 @@ public class TextProcessor1 {
 			String line;
 			while ((line = reader.readLine()) != null)
 			{
-				System.out.println(line);
 				StringTokenizer tmp = new StringTokenizer(line, " .?!");
 				this.NodeOfWords.add(tmp);
 				lengthOfFile += line.length();
