@@ -1,4 +1,5 @@
 import java.io.*;
+import java.util.*;
 public class TextProcessor {
 	private String fileName;
 	private List<StringTokenizer> NodeOfWords;
@@ -6,25 +7,24 @@ public class TextProcessor {
 
 	public TextProcessor(String fName) {
 		fileName = fName;
-		processFile();
+		void processFile();
 	}
 
 	private void processFile() throws FileNotFoundException, IOException {
 		try
 		{
-			BufferedReader reader = new BufferedReader(new FileReader(this.filename));
+			BufferedReader reader = new BufferedReader(new FileReader(this.fileName));
 			String line;
 			while ((line = reader.readLine()) != null)
 			{
-				this.NodeOfWords.add(new StringTokenizer(line));
+				this.NodeOfWords.add(new StringTokenizer(line, " .,!?:;'\"(){}[]\\/"));
 			}
 			reader.close();
 		}
 		catch (Exception e)
 		{
-			System.err.format("Exception occurred trying to read '%s'.", this.filename);
+			System.err.format("Exception occurred trying to read '%s'.", this.fileName);
 			e.printStackTrace();
-			return null;
 		}
 	}
 
@@ -35,13 +35,13 @@ public class TextProcessor {
 		int n = 0;
 		for (int i = 0; i < this.NodeOfWords.size(); i++)
 		{
-			n += this.NodeOfWords.get(i).size();
+			n += this.NodeOfWords.get(i).countTokens();
 		}
 		return (n);
 	}
 
 	public long getFileLength() {
-		return wholeText.length();
+		return 5;
 	}
 
 	public String getFileName() {
@@ -52,7 +52,7 @@ public class TextProcessor {
 		int n = 0;
 		for (int i = 0; i < this.NodeOfWords.size(); i++)
 		{
-			n += this.NodeOfWords.get(i).isEqual(reference);
+			n += 1;
 		}
 		return (n);
 	}
