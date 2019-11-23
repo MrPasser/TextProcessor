@@ -1,7 +1,7 @@
 public class TextProcessorHarness {
    public static void main(String args[]) {
    
-      TextProcessor tp = new TextProcessor("C:\\Users\\samka\\Desktop\\stuff\\java-like-things\\TextProcessor\\test.txt");
+      TextProcessor tp = new TextProcessor("");
       int wordCount = tp.getWordCount();
       System.out.println("There are " + wordCount + " words in the input file.");
       long fileLength = tp.getFileLength();
