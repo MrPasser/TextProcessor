@@ -1,23 +1,29 @@
 import java.io.*;
 import java.util.*;
-public class TextProcessor {
+public class TextProcessor1 {
 	private String fileName;
 	private List<StringTokenizer> NodeOfWords;
 	private List<String> records = new ArrayList<String>();
+	private int lengthOfFile = 0;
 
-	public TextProcessor(String fName) {
+	public TextProcessor1(String fName) {
 		fileName = fName;
-		void processFile();
+		processFile();
 	}
 
-	private void processFile() throws FileNotFoundException, IOException {
+	private void processFile()
+	{
 		try
 		{
+			System.out.println(this.fileName);
 			BufferedReader reader = new BufferedReader(new FileReader(this.fileName));
 			String line;
 			while ((line = reader.readLine()) != null)
 			{
-				this.NodeOfWords.add(new StringTokenizer(line, " .,!?:;'\"(){}[]\\/"));
+				System.out.println(line);
+				StringTokenizer tmp = new StringTokenizer(line, " ");
+				this.NodeOfWords.add(tmp);
+				lengthOfFile += line.length();
 			}
 			reader.close();
 		}
@@ -41,7 +47,7 @@ public class TextProcessor {
 	}
 
 	public long getFileLength() {
-		return 5;
+		return lengthOfFile;
 	}
 
 	public String getFileName() {

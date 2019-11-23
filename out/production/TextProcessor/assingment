@@ -1,0 +1,88 @@
+CSCI 1011 Java Programming Fall 2019 Text Processor Assignment
+
+This is not a group project. Do your own work. Giving a solution to a student is as dishonest as getting a
+solution from anyone else.
+
+The objective of this assignment is for students to gain experience with the use of at least one
+class in the Java Collections framework, along with file handling and its associated Exception
+handling, along with iteration, along with boxing and unboxing, and String manipulation.
+
+This assignment is worth 200 points, or 25% of your final grade.
+
+
+Write a new class named TextProcessor, which of course means that the file name must be
+TextProcessor.java. This class will open a text file, read its contents, and compute statistics
+regarding its words.
+
+Requirements:
+1. Add a public constructor. Its only argument is a String reference which contains the name of the
+input file. You will need to do something with this reference�
+
+2. Add a private function named "processFile". Call, aka execute this function from within your
+constructor. It returns nothing and accepts no arguments. This function will:
+   a. Open the input file. +
+   b. Read the file's contents. +
+   c. Close the file. +
+   d. Convert the file contents into a String or Strings. +-
+   e. Tokenize the String contents. +
+   f. Handle all exceptions within the body of the processFile function. That is, any user of
+      your code must be blissfully unaware of any need to handle exceptions. -
+   g. You may find that it is useful to place additional code in this function that will help you
+      solve other requirements below. For example, you may choose to keep a running total
+      of the number of words you process here and save that total as a member variable. +-
+
+3. Add a public "getter" for the word count, name it "getWordCount". Return the number of words
+   contained within the input file. +
+
+4. Add a public getter for the file length, name it getFileLength. Return the length of the file as
+   measured in bytes. -
+
+5. Add a public getter for the file name, name it getFileName. Return a reference to a String object
+   that contains the name of the input file. +
+
+6. Add a public function named countThisWord. It accepts a reference to a String object, and you
+   will find out how many times this specific String (or word or token) appears in the input file.
+   Return the count. +-
+
+7. Add a public function named getWordsHavingCount(), which accepts an int argument, the
+   count. The return type is List<String>. Return all words that appear count times in the input file.
+   For example, if the word kookaburra appears 7 times in the input file, then this function would
+   return the value 7 if the argument value is kookaburra.
+
+8. Add a public function named getWordsHavingLength(), which accepts an int argument. The
+   return type is List<String>. Return all words that have the number of characters specified by the
+   argument. For example, if your input file contains only: �This is an example� and you execute
+   this function with the argument 2, then this function will return a list containing two String
+   references: (is, an).
+
+9. Add a public function named getMostFrequentWord(), which accepts no arguments. The return
+   type is String. Ignore the possibility of a tie.
+
+10. Add a public function named getAverageWordCount(), which accepts no arguments and returns
+   the average of the word counts. For example, if your input file contains only �This is very very
+   hard�, then the average is 1.25, using counts (1, 1, 2, 1) for �this�, �is�, �very�, �hard�
+   respectively.
+11. Add a public function named getUniqueWordCount(), which accepts no arguments and returns
+the count of unique words. For example, if your input file contains only �This is very very hard�,
+then the unique count is 4.
+Pitfalls that will cost you points include:
+� Presence of println() or a main() function. These are unnecessary and including them is sloppy.
+Your job is to provide numbers and lists, nothing else. Use a test harness.
+� Poorly organized code: If you use inconsistent or non-existent indentation, choose bad variable
+names, or otherwise give spaghetti code, you will lose points. Treat this like a graded English
+language essay; neatness counts.
+� Hardcoding the input file name: This is supposed to be a general-purpose class that can work
+with any text file by any name in any location on disk. When I grade your solution, I will use at
+least two different input files with different contents and file names.
+� Treating words in a case-sensitive way: THIS and this and This are all the same word. You can
+accomplish this by storing ALL of your words as upper case or lower case, you choose which to
+use.
+� Poor choices for split characters: Make sure you consider all punctuation, digits, and white
+space.
+� Reading the input file more than once: repeating this step is wasteful and indicates either a
+fundamental misunderstanding of the proper use of member variables or sloppiness.
+� Processing input file text more than once. Do the work once, and only once, in processFile().
+Store the results. Call processFile() once, and only once, from your constructor. See the previous
+comment�
+� Excessive run time: Even �War and Peace�, which is a huge book, should take no more than a
+second to process. countThisWord() should return instantaneously.
