@@ -14,7 +14,6 @@ public class TextProcessor1 {
 	{
 		try
 		{
-			System.out.println(this.fileName);
 			BufferedReader reader = new BufferedReader(new FileReader(this.fileName));
 			String line;
 			while ((line = reader.readLine()) != null)
