@@ -1,6 +1,5 @@
 import java.io.*;
 import java.util.*;
-import Struct.java;
 public class TextProcessor1 {
 	private String fileName;
 	private List<String> NodeOfWords;
@@ -21,7 +20,7 @@ public class TextProcessor1 {
 			while ((line = reader.readLine()) != null)
 			{
 				lengthOfFile += line.length();
-				StringTokenizer tmp = new StringTokenizer(line, " .?![]{}/\\\'\",-\n\t\v1234567890", false);  //bro, read how the flag works
+				StringTokenizer tmp = new StringTokenizer(line, " .?![]{}/\\\'\",-\n\t 1234567890", false);  //bro, read how the flag works
 				while((line = tmp.nextToken()) != null)
 					this.NodeOfWords.add(line);
 			}
@@ -53,24 +52,24 @@ public class TextProcessor1 {
 		int n = 0;
 		for (int i = 0; i < this.NodeOfWords.size(); i++)
 		{
-			n += this.NodeOfWords.get(i).size();
+			n += this.NodeOfWords.get(i).length();
 		}
 		return (n);
 	}
 
 	public List<String> getWordsHavingCount(int count)
 	{
-		List<Struct> words;
-		List<String> answer;
+		List<Struct> words = null;
+		List<String> answer = null;
 
 		for (int i = 0; i < NodeOfWords.size(); i++)
 		{
-			if (word.size() != 0)
+			if (words != null)
 			{
-				bool check = false;
+				boolean check = false;
 				for (int k = 0; k < words.size(); k++)
 				{
-					if (words.get(k).equal(NodeOfWords.get(k))
+					if (words.get(k).equals(NodeOfWords.get(k)))
 					{
 						words.get(k).addCount();
 						check = true;
@@ -78,7 +77,7 @@ public class TextProcessor1 {
 				}
 				if(!check)
 				{
-					words.add(new Struct(NodeOfWords.get(i));
+					words.add(new Struct(NodeOfWords.get(i)));
 				}
 			}
 			else
@@ -86,31 +85,30 @@ public class TextProcessor1 {
 				words.add(new Struct(NodeOfWords.get(i)));
 			}
 		}
-		for (int i = 0; i < words.size; i++)
+		for (int i = 0; i < words.size(); i++)
 		{
 			if (words.get(i).getCount() == count)
-				answer.add(words.get(i));
+				answer.add(words.get(i).getWord());
 		}
 		return (answer);
 	}
 
 	public List<String> getWordsHavingLength(int lenght)
 	{
-		List<String> answer;
+		List<String> answer = null;
 
 		for (int i = 0; i < NodeOfWords.size(); i++)
 		{
-			if (NodeOfWords.get(i) == lenght)
+			if (NodeOfWords.get(i).length() == lenght)
 			{
-				bool check = false;
+				boolean check = false;
 				for (int k = 0; k < answer.size(); k++)
 				{
-					if (NodeOfWords.get(i).equal(answer.get(k)))
+					if (NodeOfWords.get(i).equals(answer.get(k)))
 						check = true;
-					}
-					if (!check)
-						answer.add(NodeOfWords.get(i));
 				}
+				if (!check)
+					answer.add(NodeOfWords.get(i));
 			}
 		}
 		return (answer);
@@ -118,18 +116,18 @@ public class TextProcessor1 {
 
 	public String getMostFrequentWord()
 	{
-		List<Struct> words;
-		String answer;
+		List<Struct> words = null;
+		String answer = null;
 		int max = 0;
 
 		for (int i = 0; i < NodeOfWords.size(); i++)
 		{
-			if (word.size() != 0)
+			if (words.size() != 0)
 			{
-				bool check = false;
+				boolean check = false;
 				for (int k = 0; k < words.size(); k++)
 				{
-					if (words.get(k).equal(NodeOfWords.get(k))
+					if (words.get(k).equals(NodeOfWords.get(k)))
 					{
 						words.get(k).addCount();
 						check = true;
@@ -137,7 +135,7 @@ public class TextProcessor1 {
 				}
 				if(!check)
 				{
-					words.add(new Struct(NodeOfWords.get(i));
+					words.add(new Struct(NodeOfWords.get(i)));
 				}
 			}
 			else
@@ -150,7 +148,7 @@ public class TextProcessor1 {
 			if (words.get(i).getCount() > max)
 			{
 				max = words.get(i).getCount();
-				answer = words.get(i);
+				answer = words.get(i).getWord();
 			}
 		}
 		return (answer);
@@ -158,17 +156,17 @@ public class TextProcessor1 {
 
 	public double getAverageWordCount()
 	{
-		List<Struct> words;
+		List<Struct> words = null;
 		double answer = 0;
 
 		for (int i = 0; i < NodeOfWords.size(); i++)
 		{
-			if (word.size() != 0)
+			if (words.size() != 0)
 			{
-				bool check = false;
+				boolean check = false;
 				for (int k = 0; k < words.size(); k++)
 				{
-					if (words.get(k).equal(NodeOfWords.get(k))
+					if (words.get(k).equals(NodeOfWords.get(k)))
 					{
 						words.get(k).addCount();
 						check = true;
@@ -176,7 +174,7 @@ public class TextProcessor1 {
 				}
 				if(!check)
 				{
-					words.add(new Struct(NodeOfWords.get(i));
+					words.add(new Struct(NodeOfWords.get(i)));
 				}
 			}
 			else
