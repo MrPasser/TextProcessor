@@ -12,30 +12,30 @@ public class TextProcessor {
 	private void processFile() throws FileNotFoundException, IOException {
 		try
 		{
-			BufferedReader reader = new BufferedReader(new FileReader(filename));
+			BufferedReader reader = new BufferedReader(new FileReader(this.filename));
 			String line;
 			while ((line = reader.readLine()) != null)
 			{
-				NodeOfWords.add(new StringTokenizer(line));
+				this.NodeOfWords.add(new StringTokenizer(line));
 			}
 			reader.close();
 		}
 		catch (Exception e)
 		{
-			System.err.format("Exception occurred trying to read '%s'.", filename);
+			System.err.format("Exception occurred trying to read '%s'.", this.filename);
 			e.printStackTrace();
 			return null;
 		}
 	}
 
 	public int getWordCount() {
-		if (NodeOfWords == null || NodeOfWords.isEmpty()) {
+		if (this.NodeOfWords == null || this.NodeOfWords.isEmpty()) {
 			return 0;
 		}
 		int n = 0;
-		for (int i = 0; i < NodeOfWords.size(); i++)
+		for (int i = 0; i < this.NodeOfWords.size(); i++)
 		{
-			n += NodeOfWords.get(i).size();
+			n += this.NodeOfWords.get(i).size();
 		}
 		return (n);
 	}
@@ -45,11 +45,15 @@ public class TextProcessor {
 	}
 
 	public String getFileName() {
-		return fileName;
+		return this.fileName;
 	}
 
-	public int countThisWord(String fileWithWords) {
-		String[] words = fileWithWords.split("\\s+");
-		return words.length;
+	public int countThisWord(String reference) {
+		int n = 0;
+		for (int i = 0; i < this.NodeOfWords.size(); i++)
+		{
+			n += this.NodeOfWords.get(i).isEqual(reference);
+		}
+		return (n);
 	}
 }
