@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d3e89521-382b-4fb8-836f-30d1077a88d6" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/TextProcessor.java" afterPath="$PROJECT_DIR$/TextProcessor1.java" />
-      <change beforePath="$PROJECT_DIR$/TextProcessorHarness.java" afterPath="$PROJECT_DIR$/TextProcessorHarness.java" />
+      <change beforePath="$PROJECT_DIR$/TextProcessor1.java" afterPath="$PROJECT_DIR$/TextProcessor1.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,8 +17,8 @@
       <file leaf-file-name="TextProcessor1.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TextProcessor1.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="41" column="57" lean-forward="true" selection-start-line="41" selection-start-column="57" selection-end-line="41" selection-end-column="57" />
+            <state relative-caret-position="330">
+              <caret line="23" column="69" lean-forward="false" selection-start-line="23" selection-start-column="69" selection-end-line="23" selection-end-column="69" />
               <folding />
             </state>
           </provider>
@@ -28,8 +27,8 @@
       <file leaf-file-name="TextProcessorHarness.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TextProcessorHarness.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+            <state relative-caret-position="60">
+              <caret line="4" column="38" lean-forward="false" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -38,8 +37,8 @@
       <file leaf-file-name="assingment" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assingment">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="375">
+              <caret line="25" column="56" lean-forward="false" selection-start-line="25" selection-start-column="56" selection-end-line="25" selection-end-column="56" />
               <folding />
             </state>
           </provider>
@@ -249,12 +248,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1574495879703</updated>
-      <workItem from="1574495887265" duration="1933000" />
+      <workItem from="1574495887265" duration="2134000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1933000" />
+    <option name="totallyTimeSpent" value="2134000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="71" y="23" width="2489" height="1336" extended-state="0" />
@@ -336,24 +335,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assingment">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="375">
+          <caret line="25" column="56" lean-forward="false" selection-start-line="25" selection-start-column="56" selection-end-line="25" selection-end-column="56" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TextProcessorHarness.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        <state relative-caret-position="60">
+          <caret line="4" column="38" lean-forward="false" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TextProcessor1.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="41" column="57" lean-forward="true" selection-start-line="41" selection-start-column="57" selection-end-line="41" selection-end-column="57" />
+        <state relative-caret-position="330">
+          <caret line="23" column="69" lean-forward="false" selection-start-line="23" selection-start-column="69" selection-end-line="23" selection-end-column="69" />
           <folding />
         </state>
       </provider>

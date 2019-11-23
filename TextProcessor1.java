@@ -21,7 +21,7 @@ public class TextProcessor1 {
 			while ((line = reader.readLine()) != null)
 			{
 				System.out.println(line);
-				StringTokenizer tmp = new StringTokenizer(line, " ");
+				StringTokenizer tmp = new StringTokenizer(line, " .?!");
 				this.NodeOfWords.add(tmp);
 				lengthOfFile += line.length();
 			}
